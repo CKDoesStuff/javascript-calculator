@@ -1,5 +1,5 @@
 #clear, #zero {
-  width: 200px;
+  width: 50%;
 }
 
 #display {
@@ -38,12 +38,14 @@
 
 .calculator {
   width: 400px;
+  min-width: 250px;
+  max-height: 565px;
   position: relative;
   border: 3px solid black;
 }
 
 .keypad-btn {
-  width: 100px;
+  width: 25%;
   height: 100px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -54,6 +56,10 @@
 
 .keypad-btn:hover {
   background-color: gray;
+}
+
+.keypad-row {
+  min-height: 20%;
 }
 
 .display-container {
