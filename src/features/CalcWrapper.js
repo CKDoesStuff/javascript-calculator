@@ -44,7 +44,7 @@ function CalcWrapper(props) {
         break;
       default:
         if (state.display && state.number === '0' && /\d\D-?$/.test(state.display)) { // If multiple ops are input in a row, override previous
-          if (op === '-') { // Account for inputting negative numbers
+          if (op === '-' && /\d\D$/.test(state.display)) { // Account for inputting negative numbers
             setState({...state, display: state.display + op})
           } else {
             setState({...state, display: state.display.replace(/(^[\d.]*)\D-?$/, `$1${op}`)});
